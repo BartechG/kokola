@@ -1,0 +1,103 @@
+.music {
+  z-index: 2;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  padding: 0.8rem;
+  align-items: center;
+  justify-items: center;
+  font-weight: 100;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  font-size: 0.9rem;
+  border-top: 1px solid white;
+  transition-duration: 0.5s;
+  .controls {
+    justify-self: end;
+  }
+  .album {
+    justify-self: start;
+  }
+  div {
+    display: flex;
+    align-items: center;
+    span {
+      margin: 0 1rem;
+    }
+  }
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 350px;
+  height: 2px;
+  border-radius: 5px;
+  background: white;
+
+  outline: none;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: white;
+
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #ffffff;
+
+  cursor: pointer;
+}
+
+.dark-player {
+  background-color: $black;
+  border-top: 2px solid;
+  border-image: linear-gradient(to right, $pink, $blue);
+  border-image-slice: 2;
+  padding: 0.4rem 0.1rem 0.2rem 0.1rem;
+  .controls i {
+    cursor: pointer;
+    border-radius: 50px;
+    background: linear-gradient(145deg, #282424, #2f2b2b);
+    box-shadow: 4px 4px 8px #211e1e, -4px -4px 8px #373232;
+    font-size: 0.7rem;
+    padding: 0.8rem 0.8rem 0.7rem 0.8rem;
+    background: -webkit-linear-gradient($pink, $blue);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    &:hover {
+      box-shadow: 4px 4px 8px #211e1e, -4px -4px 8px #373232;
+    }
+    &:active {
+      box-shadow: inset 4px 4px 8px #211e1e, inset -4px -4px 8px #373232;
+    }
+  }
+  span,
+  i {
+    background: -webkit-linear-gradient($pink, $blue);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .slider {
+    background: linear-gradient($pink, $blue);
+  }
+  .slider::-webkit-slider-thumb {
+    background: linear-gradient($pink, $blue);
+  }
+  .slider::-moz-range-thumb {
+    background: linear-gradient($pink, $blue);
+  }
+}

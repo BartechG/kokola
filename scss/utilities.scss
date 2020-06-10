@@ -1,0 +1,65 @@
+@font-face {
+  font-family: Existence;
+  src: url(../fonts/Existence-Light.otf);
+}
+@font-face {
+  font-family: StencilLight;
+  src: url(../fonts/Existence-StencilLight.otf);
+}
+
+$black: #2c2828;
+$blue: #5bb2e4;
+$pink: #f88df7;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 18px;
+}
+body {
+  font-family: Existence;
+  font-weight: bold;
+  overflow-x: hidden;
+  color: $black;
+}
+
+hr {
+  border: 1px solid white;
+  width: 25%;
+  margin: 1rem auto;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.bg-gradinet {
+  background: linear-gradient(rgba($pink, 0.1), $blue);
+}
+
+d-none {
+  display: none;
+}
+
+.fadeOut {
+  opacity: 0;
+  animation: fadeOut 1s ease-in-out forwards;
+}
+
+@keyframes fadeOut {
+  0% {
+    filter: blur(15px);
+  }
+  50% {
+    filter: brightness(1.5);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0), brightness(1);
+  }
+}

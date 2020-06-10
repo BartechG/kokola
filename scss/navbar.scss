@@ -1,0 +1,31 @@
+nav.navbar {
+  display: flex;
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  color: white;
+  transition-duration: 0.3s;
+  .logo {
+    display: flex;
+    align-items: center;
+    img {
+      height: 70px;
+    }
+    h2 {
+      transition-duration: 0.5s;
+    }
+  }
+  .menu {
+    margin-right: 0.2rem;
+    background-color: rgba($black, 0.9);
+    border-radius: 50%;
+    i {
+      cursor: pointer;
+      padding: 0.7rem 0.78rem;
+    }
+  }
+}
